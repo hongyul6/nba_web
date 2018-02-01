@@ -49,7 +49,7 @@ export class DataViewContainer extends React.Component{
                             </RadioGroup>
                         </Col>
                         <Col span={6}>
-                            Tooltip<Switch
+                            Tooltip:<Switch
                                 checkedChildren="On"
                                 unCheckedChildren="Off"
                                 defaultChecked
