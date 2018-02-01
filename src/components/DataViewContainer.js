@@ -1,6 +1,6 @@
 import React from 'react';
 import {ShotChart} from './ShotChart';
-import { Slider, InputNumber, Row, Col } from 'antd';
+import {CountSlider} from './CountSlider';
 
 export class DataViewContainer extends React.Component{
     state = {
@@ -17,20 +17,7 @@ export class DataViewContainer extends React.Component{
             <div className="data-view">
                 <ShotChart playerId={this.props.playerId}/>
                 <div className="filter">
-                    <Row>
-                        <Col span={12}>
-                            <Slider min={1} max={20} onChange={this.onChange} value={this.state.inputValue} />
-                        </Col>
-                        <Col span={4}>
-                            <InputNumber
-                                min={1}
-                                max={20}
-                                style={{ marginLeft: 16 }}
-                                value={this.state.inputValue}
-                                onChange={this.onChange}
-                            />
-                        </Col>
-                    </Row>
+                    <CountSlider/>
                 </div>
             </div>
         );
