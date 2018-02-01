@@ -3,7 +3,7 @@ import React from 'react';
 
 export class CountSlider extends React.Component {
     state = {
-        inputValue: 1,
+        inputValue: 2,
     }
     onChange = (value) => {
         this.setState({
