@@ -4,20 +4,21 @@ import {CountSlider} from './CountSlider';
 
 export class DataViewContainer extends React.Component{
     state = {
-        inputValue: 1,
+        minCount: 2,
     }
-    onChange = (value) => {
+
+    onCountSliderChange = (count) => {
         this.setState({
-            inputValue: value,
+            minCount: count,
         });
     }
 
     render(){
         return(
             <div className="data-view">
-                <ShotChart playerId={this.props.playerId}/>
+                <ShotChart playerId={this.props.playerId} minCount={this.state.minCount}/>
                 <div className="filter">
-                    <CountSlider/>
+                    <CountSlider onCountSliderChange={this.onCountSliderChange}/>
                 </div>
             </div>
         );
